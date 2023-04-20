@@ -1,0 +1,357 @@
+/* ═══════════════════════════════════════════╗
+║                                             ║
+║               WHOLE-PAGE STYLINGS           ║
+║                                             ║
+╚════════════════════════════════════════════*/
+
+h1, nav {
+  margin: 0;
+  font-family: 'IM Fell English', serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    background-color: white;
+  }
+
+  .image-mask-darken {
+    position: relative;
+  }
+  
+  .image-mask-darken:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+  }
+
+/* ═══════════════════════════════════════════╗
+║                                             ║
+║               TOP NAV AND BUTTONS           ║
+║                                             ║
+╚════════════════════════════════════════════*/
+
+.top-header {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+}
+
+
+.top-ribbon-nav {
+  width: 60%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 10px;
+}
+
+  #dark-button {
+    background-image: url("images/moon-icon.svg");
+    background-repeat: no-repeat;
+    cursor: pointer; /* changes the cursor to a pointer when mousing over an interactable button */
+    margin: 5px;
+    background-color: white;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    border: none;
+    opacity: 30%;
+  }
+
+  #light-button {
+    background-image: url("images/sun-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+  }
+
+  .gh-logo {
+    width: 70px;
+    padding: 10px 30px;
+  }
+
+
+  .top-nav-element {
+    cursor: pointer;
+    padding: 10px 30px;
+  }
+
+
+/* ═══════════════════════════════════════════╗
+║                                             ║
+║            REGISTER POP UP                  ║
+║                                             ║
+╚════════════════════════════════════════════*/
+
+.register-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.register-content {
+  width: 50vw;
+  background: #f6f6f6;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+input {
+  margin: 3px;
+}
+
+.register-title {
+  margin: 0;
+}
+
+#register-link {
+  color: black;
+}
+
+fieldset {
+  border: none;
+}
+
+
+/* ═══════════════════════════════════════════╗
+║                                             ║
+║            PRODUCT INTRO AND HERO IMG       ║
+║                                             ║
+╚════════════════════════════════════════════*/
+
+  .main-button:hover {
+    background-color: #5e5bb3;
+    border: none;
+    transition: 0.4s ease-in;
+  }
+  
+  .main-button-text {
+    font-size: 16pt;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px;
+    border: solid 1pt gold;
+  }
+  
+  .hero-image {
+    align-items: center;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    background-image: url('images/hero2.png');
+  }
+
+  .product-content {
+    color: rgb(255, 255, 255);
+    text-shadow:
+    0.5px 0.5px 0 #00000050,
+    -0.5px -0.5px 0 #00000050,
+    0.5px -0.5px 0 #00000050,
+    -0.5px 0.5px 0 #000;
+    position: absolute;
+    text-align: center;
+    width: 60%;
+    padding: 50px 5px;
+  }
+  
+  .product-title {
+    font-size: 64px;
+  }
+  
+  .product-descriptor {
+    font-size: 16px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  .call-to-action-button a {
+    color: white;
+  }
+
+  .acknowledgements-page a {
+    color: black;
+  }
+  
+/* ═══════════════════════════════════════════╗
+║                                             ║
+║               RESPONSIVE STYLINGS           ║
+║                                             ║
+╚════════════════════════════════════════════*/
+
+
+  /* stylings for when the screen width is 549 px and below, should display all categories in a single column */
+  @media (max-width: 549px) {
+    .three-category-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  
+    .indiv-category-container {
+      flex-basis: 90%;  /* this should set the width of the category container to 90pc of its parents, the three-category-container */
+    }
+  }
+
+ 
+  
+  /* ═══════════════════════════════════════════╗
+  ║                                             ║
+  ║             FEATURED CAMPAIGN SLIDER        ║
+  ║                                             ║
+  ╚════════════════════════════════════════════*/
+  
+  .slider-container {
+    display: block;
+    max-height: 320px;
+    background-color: white;
+    
+    }
+
+     img {
+      object-fit: contain;
+    }
+
+
+/* ═══════════════════════════════════════════╗
+║                                             ║
+║          CATEGORY BOX PROPERTIES            ║
+║                                             ║
+╚════════════════════════════════════════════*/
+
+.category-container {
+  padding: 50px 5px;
+}
+
+.category-title {
+  font-size: 32px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  width: 75%;
+  margin: auto auto 5% auto;
+}
+
+
+.three-category-container {
+  justify-content: center;
+  display: flex;
+  margin-bottom: -15px; /* reduces some of the white space between the 3-cat-container and the image slider */
+}
+
+.indiv-category-container {
+  margin: 1%;
+  width: 30%;
+}
+
+.indiv-category-header {
+  align-items: center;
+  color: white;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-around;
+}
+
+/* images left to right */
+.existing-campaigns  { background-image: url('images/solo.png'); }
+.existing-players { background-image: url('images/recruit.png'); }
+.new-campaigns      { background-image: url('images/new-campaign.png');}
+
+  .category-header-content {
+    position: absolute;
+  }
+
+  .category-flavour-text {
+    background: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .call-to-action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9fa268 ;
+    border-bottom: 2px solid #5e5bb3;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 15px auto 0px auto;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    width: 250px;
+    height: auto;
+  }
+  
+  .call-to-action-button:hover {
+    background-color: #5e5bb3;
+  }
+
+
+/*════════════════════════════════════════════╗
+║                                             ║
+║               FOOTER AND BOTTOM NAV         ║
+║                                             ║
+╚════════════════════════════════════════════*/
+
+
+  .gh-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0px 25px 0px 25px;
+    padding: 25px 0px 25px 0px;
+    font-size: 28px;
+  }
+
+  .acknowledgements-page a {
+    color: rgb(73, 62, 0);
+  }
+
+
+
+/*════════════════════════════════════════════╗
+║                                             ║
+║       ACKNOWLEDGEMENTS PAGE STYLINGS        ║
+║                                             ║
+╚════════════════════════════════════════════*/
+
+main {
+  text-align: center;
+  align-items: center;
+}
+
+
+
+/***********************************************
+******************** END ***********************
+***********************************************/

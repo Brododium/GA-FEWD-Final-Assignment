@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Guild Hall</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="guildhall.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+      </head>
+
+  <body>
+    <header class="top-header">
+      <div class="logo-container">
+        <a href="#homepage">
+        <img class="gh-logo" src="images/ghicon.png" alt="Guild Hall icon">
+        </a>
+      </div>
+      <nav class="top-ribbon-nav">
+        <h2 class="top-nav-element"><a href="#" id="register-link" onclick="showRegister()">Register</a></h2>
+        <h2 class="top-nav-element">Login</h2>
+        <button id="dark-button" alt="Dark mode button"></button>
+        <button id="light-button" alt="Light mode button"></button>
+      </nav>
+    </header>
+
+    <section class="hero-image image-mask-darken">
+      <div class="product-content">
+        <h1 class="product-title">The Guild Hall</h1>
+        <h2 class="product-descriptor">Connecting RPG players with Game Masters since the Year of Our Lord K'Gathor 361</h2>
+        <div class="main-button">
+          <h3 class="main-button-text">Create your profile today</h3>
+        </div>
+      </div>
+    </section>
+
+    <main>
+    <div class="register-container" id="register">
+      <div class="register-content">
+        <button id="register-close-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi bi-x" viewBox="0 0 16 16">
+          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+        <form id="create-profile">
+      <fieldset>
+        <legend>Welcome to the Guild Hall</legend>
+        <p>How might we address you, traveller?</p>
+        <div class="form-row">
+          <input type="text" name="username" placeholder="Select a username" id="name" class="username" required>
+        </div>
+        <div class="form-row">
+          <p>And how should we reach you?</p>
+          <input type="text" name="contact" class="email" placeholder="Your preferred email" required>
+        </div>
+      </fieldset>
+    
+      <fieldset>
+        <div class="form-row">
+          <p>What tabletop RPGs are you interested in?</p>
+          <div class="field-container tabletop-rpgs">
+            <input type="checkbox" name="rpg[]" id="dnd" value="DnD">
+            <label for="dnd">Dungeons and Dragons</label>
+      
+            <input type="checkbox" name="rpg[]" id="pathfinder" value="Pathfinder">
+            <label for="pathfinder">Pathfinder</label>
+      
+            <input type="checkbox" name="rpg[]" id="cthulhu" value="Call of Cthulhu">
+            <label for="cthulhu">Call of Cthulhu</label>
+      
+            <input type="checkbox" name="rpg[]" id="shadowrun" value="Shadowrun">
+            <label for="shadowrun">Shadowrun</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+      <p>Please create a watchword that we may know ye by</p>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <br>
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password">
+      <br>
+
+      <fieldset>
+        <a href="documents/Ts_and_Cs.pdf">Terms and Conditions </a><span> (Click to download or view in a separate window)</span>
+        <br>
+        <label for="tsandcs">I have read and accept the Terms and Conditions</label><input type="radio" name="tsandcs" id="tsandcs" value="Terms and Conditions" required>
+      </fieldset>
+
+      </fieldset>
+        <fieldset class="submit">
+          <input type="submit" id="submit-button" value="Submit" onclick="hideRegister()">
+      </fieldset>
+
+      
+
+      </form>
+    </div>
+    </div>
+    </form> 
+      </div>
+    </div>
+  </main>
+    
+    <section class="category-container">
+      <section class="three-category-container">
+        <div class="indiv-category-container">
+          <header class="indiv-category-header existing-campaigns image-mask-darken">
+            <div class="category-header-content">
+              <h4 class="category-title">Join an Existing Campaign</h4>
+              <p class="category-flavour-text">All ye itinerants and sellswords seeking adventure - start here. </p>
+            </div>
+          </header>
+          <div class="call-to-action-button">
+            <h3><a href="#linktocampaignpage">Find campaigns</a></h3>
+          </div>
+        </div>
+        <div class="indiv-category-container">
+          <header class="indiv-category-header existing-players image-mask-darken">
+            <div class="category-header-content">
+              <h4 class="category-title">Recruit Existing Players</h4>
+              <p class="category-flavour-text">Dungeonmasters look no further to find seasoned players to lend their strength to your story.</p>
+            </div>
+          </header>
+          <div class="call-to-action-button">
+            <h3><a href="#linktorecruitmentpage">Recruit players</a></h3>
+          </div>
+        </div>
+        <div class="indiv-category-container">
+          <header class="indiv-category-header new-campaigns image-mask-darken">
+            <div class="category-header-content">
+              <h4 class="category-title">New Campaigns</h4>
+              <p class="category-flavour-text">Dungeon masters and players alike pining to set sail on a new journey</p>
+            </div>
+          </header>
+          <div class="call-to-action-button">
+            <h3><a href="#linktonewcampaignpage">Begin a new adventure</a></h3>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <aside>
+    <div class="swiffy-slider slider-item-helper">
+      <ul class="slider-container">
+          <li><img src="images/banner1.png"></li>
+          <li><img src="images/banner2.png"></li>
+          <li><img src="images/banner3.png"></li>
+      </ul>
+  
+      <button type="button" class="slider-nav"></button>
+      <button type="button" class="slider-nav slider-nav-next"></button>
+  
+      <div class="slider-indicators">
+          <button class="active"></button>
+          <button></button>
+          <button></button>
+      </div>
+  </div>
+  </aside>
+
+    <footer class="gh-footer">
+      <div class="gh-copyright">© Guild Hall 2023</div>
+        <div class="acknowledgements-page"><a href="acknowledgementspage.html" alt="Link to assignment acknowledgements page">Acknowledgements</a></div>
+    </footer>
+    <script defer src="guildhall.js"></script>
+
+  </body>
+</html>
+
+
+
+
+<!--   
+      <nav class="controls">
+        <button id="menu-open" class="menu-control">
+          <img src="images/menu-scroll.svg" alt="image of a paper scroll indicating a menu icon">
+        </button>
+      </nav>
+      <section id="side-menu" class="menu">             
+          <nav class="side-navigation">
+            <div class="logo-container">
+              <a href="#homepage">
+              <img class="gh-logo" src="images/ghicon.png" alt="Guild Hall icon">
+              </a>
+              </div>
+            <h2 class="top-nav-element">Register</h2>
+            <h2 class="top-nav-element">Login</h2>
+            <button id="dark-button" alt="Dark mode button"></button>
+            <button id="light-button" alt="Light mode button"></button>
+          </nav>
+              <button id="menu-close" class="menu-control">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi bi-x" viewBox="0 0 16 16">
+                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </button>
+      </section> -->
