@@ -35,11 +35,14 @@ darkButton.addEventListener("click", selectDark);
 lightButton.addEventListener("click", selectLight);
 
 
+
+//checks that the passwords entered into both fields in the form match, otherwise it disables the submit button
+
 const passwordInput = document.getElementById('password');
 const confirmPasswordInput = document.getElementById('confirm-password');
-
 const form = document.getElementById('create-profile');
 const submitButton = document.getElementById('submit-button');
+
 
 confirmPasswordInput.addEventListener('input', () => {
   if (passwordInput.value === confirmPasswordInput.value) {
@@ -71,3 +74,4 @@ confirmPasswordInput.addEventListener('input', () => {
   hideRegister()
   registerTrigger.addEventListener('click', showRegister)
   registerCloseBtn.addEventListener('click',hideRegister)
+
